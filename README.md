@@ -24,13 +24,15 @@ The object executes FFmpeg as sub-process, and writes video frame to stdin pipe 
 The object also reads FFmpeg logging (text) from stderr pipe of FFmpeg.<br>
 Interfacing FFmpeg sub-process is based on JAVA code (within MATLAB).</p>
 <hr>
-<br>
-   _____________             ___________                  ________ <br>
-  | MATLAB      |           |           |                |        |<br>
-  | Array       |   stdin   | FFmpeg    |                | Output |<br>
-  | RGB (format)| --------> | process   | -------------> | file   |<br>
-  |_____________| raw frame |___________| encoded video  |________|<br>
-<br>
+
+<pre><code>
+   _____________             ___________                  ________ 
+  | MATLAB      |           |           |                |        |
+  | Array       |   stdin   | FFmpeg    |                | Output |
+  | RGB (format)| --------> | process   | -------------> | file   |
+  |_____________| raw frame |___________| encoded video  |________|
+</code></pre>
+
 <ol>
 <li class="has-line-data" data-line-start="36" data-line-end="38">Create FfmpegVideoWriter object.<br>
 Example: v = FfmpegVideoWriter(‘output.mp4’);</li>
